@@ -1,0 +1,350 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+html {
+    font-size: 13px;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+main {
+    height: calc(100vh - 15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:950px) {
+    main {
+        min-height: 900px;
+    }
+}
+
+.container {
+    width: 850px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    box-shadow: 1px 1px 25px -20px black;
+    border-radius: 15px;
+    background-color: white;
+}
+
+@media (max-width:950px) {
+    .container {
+        width: 90%;
+        max-width: 450px;
+        min-width: calc(350px * 0.9);
+        height: 90%;
+        max-height: 850px;
+        grid-template-columns: 100%;
+        grid-template-rows: 45% 55%;
+        min-height: 800px;
+    }
+}
+
+.drawers-image {
+    height: 100%;
+    position: relative;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+@media (max-width:950px) {
+    .drawers-image {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 15px;
+    }
+}
+
+.drawers-image img {
+    position: absolute;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 123%;
+    height: 100%;
+}
+
+@media (max-width:950px) {
+    .drawers-image img {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 15px;
+        width: 100%;
+    }
+}
+
+.text {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 35px 45px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3;
+}
+
+@media (max-width:950px) {
+    .text {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
+        padding: 0;
+    }
+}
+
+.heading h1 {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+@media (max-width:500px) {
+    .heading h1 {
+        margin-bottom: 20px;
+    }
+}
+
+.heading p {
+    color: var(--Desaturated-Dark-Blue);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+@media (min-width:400px) and (max-width: 950px) {
+    .heading p {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:950px) {
+    .heading {
+        padding: 35px 45px 0;
+    }
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+@media (max-width:950px) {
+    .links {
+        padding: 25px 45px;
+    }
+
+    .links.active {
+        background-color: var(--Very-Dark-Grayish-Blue);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+
+/**********************
+******** Cloned *******
+**********************/
+
+.cloned {
+    display: none;
+}
+
+@media (max-width:950px) {
+
+    .cloned.active {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+    }
+
+    .cloned.active span {
+        color: var(--Grayish-Blue);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 500;
+    }
+
+    .cloned.active a {
+        padding: 0 5px 0 4px;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+
+    .cloned.active a:first-of-type:hover {
+        background-color: white;
+        color: #0571ed;
+    }
+
+    .cloned.active a:nth-of-type(2):hover {
+        background-color: white;
+        color: #1d9bf0;
+    }
+
+    .cloned.active a:last-of-type:hover {
+        background-color: white;
+        color: #c00;
+        padding-right: 4px;
+    }
+}
+
+/**********************
+******** Cloned *******
+**********************/
+
+.person {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:950px) {
+    .person.active {
+        display: none;
+    }
+}
+
+.person>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.michelle h2 {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size: 1.1rem;
+    font-weight: 700
+}
+
+.michelle p {
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+}
+
+.share {
+    position: relative;
+}
+
+
+.share .arrow {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -34px;
+    right: 10px;
+    border: 10px solid;
+    border-color: transparent;
+}
+
+.arrow.active {
+    border-color: var(--Very-Dark-Grayish-Blue) transparent transparent transparent;
+}
+
+@media (max-width:950px) {
+    .arrow.active {
+        display: none;
+    }
+}
+
+.social {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    padding: 10px 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+    position: absolute;
+    top: -80px;
+    right: -87px;
+    display: none;
+}
+
+.social.active {
+    display: flex;
+}
+
+@media (max-width:950px) {
+    .social.active {
+        display: none;
+    }
+}
+
+.social span {
+    color: var(--Grayish-Blue);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.social a {
+    padding: 0 5px 0 4px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.social a:first-of-type:hover {
+    background-color: white;
+    color: #0571ed;
+}
+
+.social a:nth-of-type(2):hover {
+    background-color: white;
+    color: #1d9bf0;
+}
+
+.social a:last-of-type:hover {
+    background-color: white;
+    color: #c00;
+    padding-right: 4px;
+}
+
+.share>i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--Desaturated-Dark-Blue);
+    background-color: var(--Light-Grayish-Blue);
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.share>i:hover {
+    color: var(--Light-Grayish-Blue);
+    background-color: var(--Desaturated-Dark-Blue);
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
