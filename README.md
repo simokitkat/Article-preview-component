@@ -1,1 +1,1 @@
-# Article-preview-component
+<https://simokitkat.github.io/Article-preview-component/>
